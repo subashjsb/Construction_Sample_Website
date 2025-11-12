@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Gnanaraj Construction | Premium Construction & Building Solutions</title>
+    <meta name="description" content="Explore our stunning portfolio of luxury construction projects, interior designs, and architectural masterpieces.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏗️</span>
+                <span class="logo-text">Gnanaraj Construction</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="index.html#about" class="mobile-nav-link">About</a>
+            <a href="index.html#services" class="mobile-nav-link">Services</a>
+            <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+            <a href="index.html#team" class="mobile-nav-link">Team</a>
+            <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-background">
+            <div class="gallery-hero-gradient"></div>
+        </div>
+        <div class="gallery-hero-content">
+            <span class="gallery-badge">Our Portfolio</span>
+            <h1 class="gallery-hero-title">Featured Projects</h1>
+            <p class="gallery-hero-description">Discover our collection of exceptional construction and interior design projects that define luxury and innovation.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="interior">Interior Design</button>
+                <button class="filter-btn" data-filter="renovation">Renovation</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Residential Projects -->
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern Luxury Villa">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Modern Luxury Villa</h3>
+                                <p>Contemporary 5,000 sq ft villa with smart home integration</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80" alt="Coastal Retreat">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Coastal Retreat</h3>
+                                <p>Beachfront property with floor-to-ceiling windows</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mountain Lodge">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Mountain Lodge</h3>
+                                <p>Rustic luxury with modern amenities</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Projects -->
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Corporate Headquarters">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Corporate Headquarters</h3>
+                                <p>State-of-the-art office complex with sustainable design</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Luxury Hotel">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Luxury Hotel</h3>
+                                <p>5-star hotel with premium amenities and design</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Shopping Center">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Premium Shopping Center</h3>
+                                <p>Modern retail complex with innovative architecture</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interior Design Projects -->
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=2032&q=80" alt="Luxury Living Room">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Luxury Living Room</h3>
+                                <p>Elegant interior with custom furniture and lighting</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2058&q=80" alt="Modern Kitchen">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Gourmet Kitchen</h3>
+                                <p>Premium kitchen with custom cabinetry and appliances</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=2032&q=80" alt="Master Bedroom">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Master Bedroom Suite</h3>
+                                <p>Luxurious bedroom with walk-in closet and ensuite</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Renovation Projects -->
+                <div class="gallery-item" data-category="renovation">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2058&q=80" alt="Historic Home Renovation">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Historic Home Renovation</h3>
+                                <p>Complete restoration preserving original character</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="renovation">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=2032&q=80" alt="Penthouse Renovation">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Penthouse Renovation</h3>
+                                <p>Complete transformation with premium finishes</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture Projects -->
+                <div class="gallery-item" data-category="architecture">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern Architecture">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Contemporary Architecture</h3>
+                                <p>Innovative design with sustainable materials</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="architecture">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Sustainable Building">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Sustainable Building</h3>
+                                <p>LEED certified green building design</p>
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🏗️</span>
+                        <span class="logo-text">Gnanaraj Construction</span>
+                    </div>
+                    <p>Building dreams and designing futures with uncompromising quality and innovative design.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Construction</a></li>
+                        <li><a href="index.html#services">Interior Design</a></li>
+                        <li><a href="index.html#services">Renovation</a></li>
+                        <li><a href="index.html#services">Smart Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#team">Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on our latest projects.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gnanaraj Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
