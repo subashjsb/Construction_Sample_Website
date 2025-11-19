@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.toggleTheme = function() {
         const body = document.body;
         const themeToggle = document.querySelector('.theme-toggle i');
-        const currentTheme = body.getAttribute('data-theme') || 'dark';
+        const currentTheme = body.getAttribute('data-theme') || 'light';
         
         if (currentTheme === 'dark') {
             body.setAttribute('data-theme', 'light');
